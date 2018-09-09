@@ -1,0 +1,17 @@
+{
+	"name": "Real Price",
+	"version": "0.0.0.1",
+	"manifest_version": 2,
+	"description": "WARNING: This is in pre-release stage, may not work as intended :). See the real price of online items by adding the shipping price to the item price. Currently only supports ebay",
+	"homepage_url":"http://www.github.com/ChadBailey/",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Show real prices"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.ebay.com/*"],
+			"js" : ["jquery.js","actualprice.js"]
+		}
+	]
+}
